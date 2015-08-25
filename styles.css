@@ -1,0 +1,904 @@
+/* Code developed by Author:- Amol Vaze (asv130130@utdallas.edu), Assignment -3 & 4, Due Date:- Aug 3, 2015, Time noon */
+* { padding:0; margin: 0; }
+a { text-decoration: none; }
+p { padding-left: 10 px;}
+.container { width: 700 px; margin-left:auto; margin-right:auto; background:url("images/bckg.jpg") repeat;  }
+.container_reg{ width: 700 px; margin-left:auto; margin-right:auto; background:url("images/bckg.jpg") repeat;  }
+/* .header { background-color: gray; } */ 
+
+  .header { background:url("images/rock.jpg") repeat; }
+
+  /*  .navigation {background-color: #B36314; width: 150 px; text-decoration: none; height: 48px; } */
+
+ .navigation {background:url("images/grey.jpg") repeat; width: 150 px; text-decoration: none; height: 48px; margin-top:-1px; }
+  
+.navigation ul { list-style-type: none; padding-top:14px; padding-left: 15px;  }
+
+
+.navigation li { display: inline; margin-left: 50 px; margin-right: 50px;  }
+
+
+.navigation li a { color: white; font-weight:bold; font-family: Verdana; font-size: 15px;  }
+
+.navigation li a:hover { color: #ED4F11;}
+
+.login { align: center; padding: 10 px; margin-top: 10 px; text: bold; }
+
+
+
+.header img { width: 210 px; height: 210 px; padding:0px; margin-right: 20 px;  }
+
+.tooltip {  display: inline;
+    position: relative;}
+
+#title{ font-size: 22px; }
+
+.main {float: left; width: 700 px; padding-left: 50px;  }
+
+#submit { background: #ED4F11;
+  background-image: -webkit-linear-gradient(top, #ED4F11, #FCDBD4);
+  background-image: -moz-linear-gradient(top, #ED4F11, #FCDBD4);
+  background-image: -ms-linear-gradient(top, #ED4F11, #FCDBD4);
+  background-image: -o-linear-gradient(top, #ED4F11, #FCDBD4);
+  background-image: linear-gradient(to bottom, #ED4F11, #FCDBD4);
+  -webkit-border-radius: 25;
+  -moz-border-radius: 25;
+    outline:none;
+  border-radius: 25px;
+  font-weight:bold; 
+  font-family: Verdana;
+  color: #FFFFFF;
+  border: #E63B19;
+  font-size: 15px;
+  padding: 10px 28px 10px 28px;
+  margin-left:118px;
+  text-decoration: none;
+  box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+  cursor: pointer;
+  margin-top: 10px;
+  }
+  
+  #submit:hover { color: #B02004; }
+  
+.footer { clear : left; background-color : gray; margin-top: 400px;  height: 72px;  text-align: center; text-decoration: none; color: white; padding-top: 8px; }
+
+.footer a { margin-top: 15px; color: white; font-size: 8 px; text-decoration: none; }
+
+.footer a:hover { color: #ED4F11; text-decoration: underline; }
+
+.degree  p{ text-align: center; padding-top: 50 px; padding-left: 80 px; font-family: verdana; font-size: 12 px; }
+
+.degree-content  p { padding: 30 px;  font-family : Verdana; font-size: 10 px; padding-left:20px; padding-right:20px;  }
+
+.degree-plan p { font-family: Verdana; font-size: 12px;  }
+
+table, td, th{ border: 1px solid black; border-collapse: collapse;  text-align: center; }
+
+th, td {
+    padding: 10px;
+    text-align: center;
+	
+}
+
+ #row { font-weight: bold; background:#F2EBB8; font-size:18px; color:#471907;}
+ 
+ 
+ 
+ #Login_Form{ 
+ 
+   border: 1px dotted #B06241;
+   border-radius: 10px;
+  -webkit-appearance: none;
+	/* height:236px; */
+	height:auto;
+	width:320px; 
+	padding:20px;
+	/* background: #F7DFD2; */
+	background: #EDEDE8; 
+	margin-left: 466px;
+	margin-top: 30px; 
+ }
+ 
+ #Username { 
+ 
+    border: 1px solid #000;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 200px;
+	height:20px;
+	margin-left: 10px;
+	}
+
+#Password {
+
+    border: 1px solid #000;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 200px;
+	height:20px;
+	margin-left: 14px; 
+
+}
+
+#text{ margin-left: 450px; font-size: 20px; text-align:center; font-family: Verdana; font-weight:bold; }
+#grades_text{ font-size: 18px; text-align:center; font-family: Verdana; font-weight:bold; color: #663807; }
+#addclasses{ margin-left: 500px; font-size: 20px; text-align:center; font-family: Verdana; font-weight:bold; }
+
+#viewmygrades { font-size: 20px; text-align:center; font-family: Verdana; font-weight:bold; margin-top: 45px; color: #663807; } 
+
+#profile{margin-left: 290px; font-size: 20px; text-align:center; font-family: Verdana; font-weight:bold; }
+
+#admin_profile{margin-left: 430px; font-size: 20px; text-align:center; font-family: Verdana; font-weight:bold; }
+
+#usermgmt_page{margin-left: 430px; font-size: 20px; text-align:center; font-family: Verdana; font-weight:bold; }
+
+#user_list{margin-left: 400px; font-size: 20px; text-align:center; font-family: Verdana; font-weight:bold; }
+
+#text1{ margin-left: 450px; font-size: 15px; text-align:center; font-family: Verdana; font-weight:bold; }
+
+#text1 a {color: #e63b19;}
+
+#text1 a:hover{ text-decoration:underline; }
+
+#classid { border: 1px solid #000;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 200px;
+	height:20px;
+	margin-left: 10px; 
+	outline:none;
+	}
+	
+#coretxt{
+border: 1px solid #000;
+ font-size: 16px;
+    padding-left: 5px;
+    width: 200px;
+	height:20px;
+	margin-left: 10px; 
+	outline:none;
+}
+	
+	#classid1 { border: 1px solid #000;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 200px;
+	height:20px;
+	margin-left: 27px; 
+	outline:none;
+	}
+
+	#classname { border: 1px solid #000;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 200px;
+	height:20px;
+	margin-left: 6px; 
+	outline:none;
+	}
+	
+	#classprefix { border: 1px solid #000;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 200px;
+	height:20px;
+	margin-left: 98px; 
+	outline:none;
+	margin-top:-18px;
+	}
+	
+	#classhours { border: 1px solid #000;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 200px;
+	height:20px;
+	margin-left: 98px; 
+	outline:none;
+	margin-top:-18px;
+	}
+	
+	#degId { border: 1px solid #000;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 200px;
+	height:20px;
+	margin-left: 38px; 
+	outline:none;
+	}
+	
+#mygrade {
+ border: 1px solid #000;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 200px;
+	height:20px;
+	margin-left: 35px;
+	outline:none;
+ }
+ 
+ #Planner_Form {
+ 
+   border: 1px dotted #B06241;
+   border-radius: 10px;
+  -webkit-appearance: none;
+	height:auto;
+	padding:20px;
+	width:auto;
+	/* background: #F7DFD2; */
+	background: #EDEDE8; 
+	margin-left: 300px;
+	margin-top: 30px; 
+ }
+ 
+ #admin_Form {
+ 
+   border: 1px dotted #B06241;
+   border-radius: 10px;
+  -webkit-appearance: none;
+	height:auto;
+	padding:20px;
+	width:400px;
+	/* background: #F7DFD2; */
+	background: #EDEDE8; 
+	margin-left: 420px;
+	margin-top: 30px; 
+ }
+ #grade_analysis{
+   border: 1px dotted #B06241;
+   border-radius: 10px;
+  -webkit-appearance: none;
+	height:auto;
+	padding:20px;
+	width:500px;
+	background: #fff; 
+	margin-left: 400px;
+	margin-top: 30px; 
+	color:#6E310B;
+ }
+ 
+ #grade_analysis:hover{background: #EDEDE8;  font-weight:bold; color:black; }
+ 
+ #list{   margin-left: 25px; margin-right: 25px; font-weight: bold; }
+ 
+ #form_button_select { 
+  
+    height: 35px;
+    width: 100px;
+	font-family:Verdana;
+	font-size:14px;
+	font-weight:normal;
+	float:left;
+	outline:none;
+	background:#C4BCB7;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+ }
+ 
+ #form_button_select:hover{ font-weight:bold; background-color:#6E310B; color:white;}
+ 
+ #core{
+    height: 30px;
+    width: 150px;
+	font-family:Verdana;
+	font-size:14px;
+	font-weight:normal;
+	margin-left:30px;
+	outline:none;
+	background:#C4BCB7;
+	 -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+	cursor:hand;
+ }
+ #core:hover{ font-weight:bold; background-color:#6E310B; color:white;}
+ 
+ #form_button_add { 
+  
+    height: 40px;
+    width: 130px;
+    font-family:Verdana;
+	font-size:14px;
+	font-weight:normal;
+	cursor:pointer;
+	float:left;
+	outline:none;
+   -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+   border:1 px solid #ccc;
+   background:#C4BCB7;
+ }
+ 
+ #form_button_add:hover{ font-weight:bold; background-color:#6E310B; color:white; }
+ 
+ 
+ #Ack_Form {
+ 
+   border: 1px dotted #B06241;
+   border-radius: 10px;
+  -webkit-appearance: none;
+	height:auto;
+	padding:20px;
+	width:550px;
+	/* background: #F7DFD2; */
+	background: #EDEDE8; 
+	margin-left: 380px;
+	margin-top: 30px; 
+ }
+ 
+ #studentname { border: 1px solid #000;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 200px;
+	height:20px;
+	margin-left: 10px; 
+	outline:none;
+	}
+
+#UTDID {
+ border: 1px solid #000;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 200px;
+	height:20px;
+	margin-left: 82px;
+	outline:none;
+ }
+ 
+ #semester {
+ border: 1px solid #000;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 200px;
+	height:20px;
+	margin-left: 74px;
+	outline:none;
+ }
+ 
+ #sign {
+ border: 1px solid #000;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 200px;
+	height:20px;
+	margin-left: 38px;
+	outline:none;
+ }
+ 
+ #external_link{
+ 
+ color:#b06241;
+ 
+ 
+ 
+ }
+ 
+ #external_link:hover{ color: #b06241;  font-weight: bold;  }
+ 
+ #form_button {
+    height: 30px;
+    border: 1 px solid #000;
+    width: 165px;
+	background: #FFF;
+	font-family:Verdana;
+	font-size:14px;
+	font-weight:normal;
+	outline:none;
+	margin-left:180px;
+	cursor:pointer;
+	
+ }
+ 
+ #form_button:hover { font-weight:bold;}
+ 
+ .register{ margin-left: 80px; margin-top: 15px; font-weight:bold; }
+ 
+ #register{ color: #B06241; font-weight:bold; }
+ 
+ #register:hover{ text-decoration:underline; }
+ 
+ #admin{ color: #B06241; font-weight:bold; margin-left:42px; }
+ 
+ #admin:hover{ text-decoration:underline; }
+ 
+ #Registration_Form{ 
+ 
+   border: 1px dotted #B06241;
+   border-radius: 10px;
+  -webkit-appearance: none;
+	/* height:236px; */
+	height:auto;
+	width:300px; 
+	padding:20px;
+	/* background: #F7DFD2; */
+	background: #EDEDE8; 
+	margin-left: 466px;
+	margin-top: 30px; 
+	margin-bottom:15px;
+ }
+ 
+ #ManageUser_Form{ 
+ 
+   border: 1px dotted #B06241;
+   border-radius: 10px;
+  -webkit-appearance: none;
+	/* height:236px; */
+	height:auto;
+	width:300px; 
+	padding:20px;
+	/* background: #F7DFD2; */
+	background: #EDEDE8; 
+	margin-left: 466px;
+	margin-top: 30px; 
+	margin-bottom:15px;
+ }
+ 
+ 
+ #regname{
+ border: 1px solid #000;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 175px;
+	height:20px;
+	margin-left: 45px;
+	outline:none;
+	}
+	
+	#regusername{
+	border: 1px solid #000;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 175px;
+	height:20px;
+	margin-left: 16px;
+	outline:none;
+	}
+	
+	#regpassword{
+	border: 1px solid #000;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 175px;
+	height:20px;
+	margin-left: 19px;
+	outline:none;
+	}
+	
+	#confirm_pass{
+	  border: 1px solid #000;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 175px;
+	height:20px;
+	margin-left: 26px;
+	outline:none;
+	
+	}
+	
+	#regdegId{
+	border: 1px solid #000;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 175px;
+	height:20px;
+	margin-left: 40px;
+	outline:none;
+	}
+	
+	#Register_Button{
+	
+	height: 30px;
+    border: 1 px solid #000;
+    width: 165px;
+	background: #FFF;
+	font-family:Verdana;
+	font-size:14px;
+	font-weight:normal;
+	outline:none;
+	margin-left:74px;
+	cursor:pointer;
+	
+	}
+ 
+ #Register_Button:hover { font-weight:bold; color: #D1460A; }
+ 
+ #logout{
+ 
+ color: #B06241;
+ font-weight:bold;
+ font-size: 20px;  
+ float:right;
+
+ }
+ #admin_logout{
+ 
+ color: #B06241;
+ font-weight:bold;
+ font-size: 20px;  
+ float:right;
+ margin-left:80px;
+
+ }
+ 
+ #logout:hover{ text-decoration: underline; }
+ 
+ #admin_logout:hover{ text-decoration: underline; }
+ 
+ #forgot_form{
+ 
+  border: 1px dotted #B06241;
+   border-radius: 10px;
+  -webkit-appearance: none;
+	/* height:236px; */
+	height:auto;
+	width:auto; 
+	padding:20px;
+	/* background: #F7DFD2; */
+	background: #EDEDE8; 
+	margin-left: 466px;
+	margin-top: 22px; 
+
+ }
+ 
+#submit1_button{
+height: 30px;
+    border: 1 px solid #000;
+    width: 165px;
+	background: #FFF;
+	font-family:Verdana;
+	font-size:14px;
+	font-weight:normal;
+	outline:none;
+	margin-left:22px;
+	cursor:pointer;
+
+}
+
+#submit1_button:hover { font-weight:bold;}
+
+#forgot_text{
+font-size: 20px;
+}
+
+#add_Form{
+background: #edede8 none repeat scroll 0 0;
+    border: 1px dotted #b06241;
+    border-radius: 10px;
+    height: auto;
+    margin-left: 466px;
+    margin-top: 30px;
+    padding: 20px;
+    width: 320px;
+
+}
+
+
+#add_Form_Button{
+height: 30px;
+    border: 1 px solid #000;
+    width: 165px;
+	background: #FFF;
+	font-family:Verdana;
+	font-size:14px;
+	font-weight:normal;
+	outline:none;
+	margin-top:15px;
+	margin-left:90px;
+	cursor:pointer;
+	 -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+	background:#C4BCB7;
+
+}
+
+#add_Form_Button:hover { font-weight:bold; background-color:#6E310B; color:white;}
+
+#grade_table {
+   
+    padding: 5px;
+    text-align: center;
+	width:auto;
+    height:auto;
+    background-color:#d9d9d9;
+    margin-left:auto; 
+    margin-right:auto;  
+    margin-bottom:25px;
+	margin-top:25px;
+	border: 1px solid black;
+
+
+}
+
+#links{  
+ color:#b06241;
+ 
+
+}
+
+#links:hover{ 
+ 
+ text-decoration:underline;
+ 
+ }
+
+ #checkcore{
+ font-weight:bold;
+ background:white;
+ border: 1px dotted #B06241;
+   border-radius: 10px;
+  -webkit-appearance: none;
+	height:auto;
+	padding:20px;
+	width:auto;
+	
+	
+ }
+ 
+ #checkcore:hover{background: #EDEDE8;  }
+ 
+ #gradetable{
+ 
+ background:#F2F0DF;
+ }
+ 
+ #toprow{
+ background:#D9D3AB;
+ font-size:20px;
+ color:#471907;
+ font-weight:bold;
+ }
+ 
+ 
+ #hr{
+ border-style: dotted; 
+ }
+ 
+ #selectTrack {
+ 
+ background:#F7F5EB;
+ font-weight:bold; 
+ color: #964D30; 
+ outline:none;
+ 
+ 
+ }
+ 
+ #selectSem{
+ background:#F7F5EB;
+ font-weight:bold; 
+ color: #964D30;
+ outline:none;
+ }
+ 
+ #choose {
+ background:#F5ECB0;
+ font-weight:bold; 
+ color: #964D30;
+ outline:none;
+ } 
+ 
+ #selectSemester{
+ background:#F5ECB0;
+ font-weight:bold; 
+ color: #964D30;
+ outline:none;
+ 
+ }
+ 
+ #core_form{
+ border: 1px dotted #B06241;
+   border-radius: 10px;
+  -webkit-appearance: none;
+	/* height:236px; */
+	height:210px;
+	width:500px; 
+	padding:20px;
+	/* background: #F7DFD2; */
+	background: #EDEDE8; 
+	margin-left: auto;
+	margin-right:auto;
+ 
+ }
+ 
+ #adminlist{ list-style-type: none; }
+ 
+ #usermgmtlist{list-style-type:none; }
+ 
+ #usermgmt{
+  height: 40px;
+    border: 1 px solid #000;
+    width: 165px;
+	background: #FFF;
+	font-family:Verdana;
+	font-size:14px;
+	font-weight:normal;
+	outline:none;
+	margin-top:20px;
+	margin-left:125px;
+	cursor:pointer;
+	 -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+	background:#C4BCB7;
+
+ }
+ 
+ #usermgmt:hover{ font-weight:bold; background-color:#6E310B; color:white;}
+ 
+ #usabilitymgmt{
+  height: 40px;
+    border: 1 px solid #000;
+    width: 220px;
+	background: #FFF;
+	font-family:Verdana;
+	font-size:14px;
+	font-weight:normal;
+	outline:none;
+	margin-top:20px;
+	margin-left:96px;
+	cursor:pointer;
+	 -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+	background:#C4BCB7;
+
+ }
+ 
+ #usabilitymgmt:hover{ font-weight:bold; background-color:#6E310B; color:white; width:230px; }
+ 
+ #userlist{
+  height: 40px;
+    border: 1 px solid #000;
+    width: 165px;
+	background: #FFF;
+	font-family:Verdana;
+	font-size:14px;
+	font-weight:normal;
+	outline:none;
+	margin-top:20px;
+	margin-left:125px;
+	cursor:pointer;
+	 -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+	background:#C4BCB7;
+
+ }
+ 
+ #userlist:hover{ font-weight:bold; background-color:#6E310B; color:white;}
+ 
+ 
+ #forgotpwd{
+  height: 40px;
+    border: 1 px solid #000;
+    width: 165px;
+	background: #FFF;
+	font-family:Verdana;
+	font-size:14px;
+	font-weight:normal;
+	outline:none;
+	margin-top:20px;
+	margin-left:125px;
+	cursor:pointer;
+	 -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+	background:#C4BCB7;
+
+ }
+ 
+ #forgotpwd:hover{ font-weight:bold; background-color:#6E310B; color:white;}
+ 
+ #loginlock{
+  height: 40px;
+    border: 1 px solid #000;
+    width: 165px;
+	background: #FFF;
+	font-family:Verdana;
+	font-size:14px;
+	font-weight:normal;
+	outline:none;
+	margin-top:20px;
+	margin-left:125px;
+	cursor:pointer;
+	 -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+	background:#C4BCB7;
+
+ }
+ 
+ #loginlock:hover{ font-weight:bold; background-color:#6E310B; color:white;}
+ 
+ #mgmuser{
+  height: 40px;
+    border: 1 px solid #000;
+    width: 165px;
+	background: #FFF;
+	font-family:Verdana;
+	font-size:14px;
+	font-weight:normal;
+	outline:none;
+	margin-top:20px;
+	margin-left:125px;
+	cursor:pointer;
+	 -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+	background:#C4BCB7;
+
+ }
+ 
+ #mgmuser:hover{ font-weight:bold; background-color:#6E310B; color:white;}
+ 
+ #list_layout{   
+      border: 1px dotted #B06241;
+   border-radius: 10px;
+  -webkit-appearance: none;
+	height:auto;
+	padding:20px;
+	width:500px;
+	background: #fff; 
+	margin-left: 400px;
+	margin-top: 30px; 
+	color:#6E310B;
+ }
+ 
+ #USE{ margin-left: 150px; margin-right:auto; font-size: 20px; text-align:center; font-family: Verdana; font-weight:bold; margin-top:5px; }
+ 
+ 
+ #USE_Form{   
+      border: 1px dotted #B06241;
+   border-radius: 10px;
+  -webkit-appearance: none;
+	height:auto;
+	padding:20px;
+	width:auto;;
+	background: #fff; 
+	margin-left: 100px;
+	margin-top: 30px; 
+	color:#6E310B;
+ }
+ 
+ /* #USE_Form:hover{ background: #F5F2F0; font-weight:bold; } */
+ 
+ #USE_LIST{
+  
+   margin-left:10px; 
+ 
+ }
+ 
+ #maildata{
+ 
+  height: 30px;
+  width: 125px; 
+  color: #6E310B;
+  padding:5px; 
+  cursor:pointer;
+ }
+ 
+ #maildata:hover{ font-weight:bold; background:white; }
+ 
+ #commentall{
+ height: 30px;
+  width: 125px; 
+  color: #6E310B;
+  margin-left:15px; 
+  padding:5px; 
+  cursor:pointer;
+ }
+ 
+ #commentall:hover{font-weight:bold; background:white;  }
+ 
+ #ratings{ background:#F5F2F0; margin-left:15px; margin-right:15px;  font-size:16px;  color:#6E310B;  font-weight:bold; }
+ 
+ #survey_button{
+  height: 30px;
+  font-size:16px; 
+  width: 300px; 
+  color: #6E310B;
+  margin-left:15px; 
+  padding:5px; 
+  cursor:pointer;
+  outline:none;
+ }
+ #survey_button:hover{font-weight:bold; background:white; }
+ 
+ .bg
+{
+color:#00F;
+font-weight:bold;
+margin:10px;
+}

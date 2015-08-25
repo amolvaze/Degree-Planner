@@ -1,0 +1,125 @@
+<!-- Code developed by Author:- Amol Vaze (asv130130@utdallas.edu), Assignment -3 & 4, Due Date:- Aug 3, 2015, Time Noon -->
+<?php 
+			 require 'db.php';
+			 $con=mysqli_connect('localhost','root','') or die(mysqli_error());
+			 mysqli_select_db($con,'amol_db') or die("cannot select DB");
+			
+     //$sql= "select * from user u JOIN grade g JOIN class c where g.classid= c.classid AND g.userid= u.userid AND u.username= '".$_SESSION['sess_user']."'  group by g.userid  " ;
+ $sql = "select c.classname, g.gradeletter from class c JOIN user u JOIN grade g where c.classid = g.classid And u.userid = g.userid AND g.classid IN ('6363','6320', '6364', '6375', '6360', '6359', '6322', '6301', '6313') AND u.username= '".$_SESSION['sess_user']."' ";      
+						if ($result=mysqli_query($con,$sql))
+						  { 
+						        $numberGrade = 0.0;
+								$totalGrade1=0.0;
+								$avggrade1=0.0;
+								$totalGrade2=0.0;
+								$totalGrade3=0.0;
+								$avggrade2=0.0;
+								$avggrade3=0.0;
+								
+								 while ($array=mysqli_fetch_assoc($result))
+									{   
+											//print_r($array);						
+										//printf("%s\n", $array['gradeletter']);
+										  if($array['gradeletter'] == 'A'){
+										      $numberGrade=4.0;
+										       //printf("%s\n", $numberGrade);
+										   }
+										   elseif($array['gradeletter'] == 'A-')
+										        {
+														 $numberGrade=3.67;
+												   //printf("%s\n", $numberGrade);
+												}
+											elseif($array['gradeletter'] == 'B+')
+										        {
+														 $numberGrade=3.33;
+												   //printf("%s\n", $numberGrade);
+												}
+													elseif($array['gradeletter'] == 'B')
+													{
+															 $numberGrade=3.0;
+													   //printf("%s\n", $numberGrade);
+													}
+														elseif($array['gradeletter'] == 'B-')
+														{
+																 $numberGrade=2.67;
+														   //printf("%s\n", $numberGrade);
+														}
+														  elseif($array['gradeletter'] == 'C+')
+										                    {
+														          $numberGrade=2.33;
+												                     //printf("%s\n", $numberGrade);
+												               }
+															    elseif($array['gradeletter'] == 'C')
+										                        {
+														          $numberGrade=2;
+												                     //printf("%s\n", $numberGrade);
+												                 } 
+																 elseif($array['gradeletter'] == 'C-')
+										                          {
+														          $numberGrade=1.67;
+												                     //printf("%s\n", $numberGrade);
+												                  } 
+																    elseif($array['gradeletter'] == 'D')
+										                              {
+														                   $numberGrade=1;
+												                            //printf("%s\n", $numberGrade);
+												                       }
+													                 else {
+																	 $numberGrade=0.0;
+																	  //printf("%s\n", $numberGrade);
+																	 }
+													 
+											
+if($array['classname'] == 'Natural Language Processing' || $array['classname'] == 'Machine Learning' || $array['classname'] == 'Artificial Intelligence' || $array['classname'] == 'Database Design' || $array['classname'] == 'Design and Analysis of Computer Algorithms')
+					{
+						$totalGrade1 = ($totalGrade1 + $numberGrade);
+                           $avggrade1 = ($totalGrade1)/5; 
+					}
+if($array['classname'] == 'Statistical Methods For Data Science' || $array['classname'] == 'Machine Learning' || $array['classname'] == 'Big Data Management & Analytic' || $array['classname'] == 'Database Design' || $array['classname'] == 'Design and Analysis of Computer Algorithms')
+					{
+						$totalGrade3 = ($totalGrade3 + $numberGrade);
+                           $avggrade3 = ($totalGrade3)/5; 
+					}
+								$totalGrade2 = ($totalGrade2 + $numberGrade);
+                                       $avggrade2 = ($totalGrade2)/mysqli_num_rows($result); 					 
+									   
+									}
+										echo"<br/>";
+										printf("Intelligent Systems Track GPA:");
+										printf("%s\n, %s\n", round($avggrade1,2), round($avggrade2,2));
+										echo"<br/><br/>";
+										if($avggrade1 >= 3.19 && $avggrade2 >=3.0){
+										echo "You have satisfied both Core & Overall GPA criteria! ";
+										echo"<br/><br/>";
+										echo"<br/>";
+										printf("Data Science Track GPA:");
+										printf("%s\n, %s\n", round($avggrade3,2), round($avggrade2,2));
+										echo"<br/><br/>";
+										if($avggrade3 >= 3.19 && $avggrade2 >=3.0){
+										echo "You have satisfied both Core & Overall GPA criteria! ";
+										echo"<br/><br/>";
+										
+										echo "Congrats! You became eligible for graduation for both the tracks.";
+										}
+                                        elseif($avggrade1>=3.19 && $avggrade2 <=3.0 &&$avggrade3>=3.19){
+										echo "You have satisfied Core & not Overall GPA criteria! ";
+										echo"<br/><br/>";
+										echo "Please take one elective course!";
+										}elseif($avggrade1<=3.19 && $avggrade2 >=3.0 && $avggrade3<=3.19){
+										echo "You have satisfied Overall & not Core GPA criteria! ";
+										echo"<br/><br/>";
+										echo "Please take either one extra course or repeat one core course!";
+										}
+										else
+										{
+									echo "You have not satisfied Core & Overall GPA criteria.";	
+									echo"<br/><br/>";
+									echo "Oops! You are not eligible for graduation";
+										}
+										// Free result set
+											  mysqli_free_result($result);
+					      }	
+					
+				
+}						//mysqli_free_result($result);				
+?>
